@@ -1,0 +1,44 @@
+GET http://localhost:3100/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiBEb2UiLCJwYXNzd29yZCI6IiQyYiQxMCQ2U1pwdlNUWDV0OVF2Y3VIbHVSMzdPT3VIWWZ4d05KUHJzbUxBR0tVS21IWW5UVnE4VU01UyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzcyMjkzMCwiZXhwIjoxNzI3NzI0MTMwfQ.nkzCUAtUFXUkOD9rAIwypODvnhGBofLgXoGJUkE_-Uw
+###
+POST http://localhost:3100/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "password": "pass",
+    "role": "basic"
+}
+###
+DELETE http://localhost:4100/logout
+Content-Type: application/json
+
+{
+    "token":
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiBEb2UiLCJwYXNzd29yZCI6IiQyYiQxMCQ2U1pwdlNUWDV0OVF2Y3VIbHVSMzdPT3VIWWZ4d05KUHJzbUxBR0tVS21IWW5UVnE4VU01UyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzcyMjkzMCwiZXhwIjoxNzI3NzI0MTMwfQ.nkzCUAtUFXUkOD9rAIwypODvnhGBofLgXoGJUkE_-Uw"
+}
+###
+POST http://localhost:4100/users
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "password": "pass",
+  "role": "admin"
+}
+###
+POST http://localhost:4100/token
+Content-Type: application/json
+
+{
+    "token":
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiBEb2UiLCJwYXNzd29yZCI6IiQyYiQxMCQ2U1pwdlNUWDV0OVF2Y3VIbHVSMzdPT3VIWWZ4d05KUHJzbUxBR0tVS21IWW5UVnE4VU01UyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyNzcyMjkzMH0.ofBm4Bat1Wjb74UHYG7cLtPnLjSKpfwZiQQFatbPaGM"
+}
+###
+POST http://localhost:4100/users/login
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "password": "pass"
+}
